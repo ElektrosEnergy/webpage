@@ -1,0 +1,80 @@
+:root{
+  --bg:#f6fcff;
+  --card:#ffffff;
+  --accent-1:#0077b6; /* deep blue */
+  --accent-2:#00b894; /* green-teal */
+  --text:#10303a;
+  --muted:#55636b;
+  --radius:12px;
+  --container:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  color:var(--text);
+  background:linear-gradient(180deg,#f6fcff 0%, #eef9f4 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:2rem;
+}
+
+/* header */
+.site-header{background:transparent; position:sticky; top:0; z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{display:flex;align-items:center;text-decoration:none;color:inherit}
+.logo{height:44px;margin-right:.6rem}
+.brand-name{font-weight:700;font-size:1.05rem}
+.nav a{margin-left:1rem;text-decoration:none;color:var(--muted)}
+.nav .cta{background:var(--accent-2);color:white;padding:.55rem .8rem;border-radius:10px;margin-left:1rem;font-weight:600}
+
+/* hero */
+.hero{padding:5rem 0;background:linear-gradient(135deg, rgba(0,119,182,0.08), rgba(0,184,148,0.06));border-bottom:1px solid rgba(16,48,58,0.04)}
+.hero-inner{max-width:880px}
+.hero h1{font-size:clamp(1.6rem,3.5vw,2.6rem);margin:0 0 .6rem}
+.lead{color:var(--muted);margin-bottom:1rem}
+.btn{display:inline-block;text-decoration:none;border-radius:10px;padding:.65rem 1rem}
+.btn-primary{background:var(--accent-1);color:white}
+.btn-outline{border:1px solid rgba(16,48,58,0.08);color:var(--text)}
+
+/* sections */
+.section{padding:3.5rem 0}
+.section.alt{background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.9))}
+.split{display:flex;gap:2rem;align-items:center}
+.split-image img{width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(16,48,58,0.06)}
+.split-content{flex:1}
+.split-image{flex:1}
+
+/* cards */
+.cards .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(16,48,58,0.04)}
+
+/* features */
+.features{display:flex;gap:1rem;flex-wrap:wrap}
+.feature{flex:1;min-width:200px;background:linear-gradient(180deg,#fff,#fbfffe);padding:1rem;border-radius:10px;border:1px solid rgba(0,119,182,0.04)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:1rem}
+
+/* investors specific */
+.investors-section .split-content ul {margin-top:1rem}
+.investors-section .split-image img {max-height:220px;object-fit:cover}
+
+/* footer */
+.site-footer{padding:2rem 0;background:transparent;border-top:1px solid rgba(16,48,58,0.04)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.small{color:var(--muted);font-size:.9rem}
+
+/* responsive */
+@media (max-width:900px){
+  .split{flex-direction:column}
+  .nav{display:none}
+  .container{padding:1rem}
+}
